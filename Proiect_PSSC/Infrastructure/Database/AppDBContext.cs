@@ -8,11 +8,11 @@ public class AppDBContext
 
     public AppDBContext()
     {
-        // Inițializare date mock
         Produse = new List<Produs>
         {
             new Produs(Guid.NewGuid(), "Produs1", 100m, 10),
-            new Produs(Guid.NewGuid(), "Produs2", 50m, 20)
+            new Produs(Guid.NewGuid(), "Produs2", 50m, 20),
+            new Produs(Guid.NewGuid(), "Produs3", 99m, 5),
         };
     }
 }

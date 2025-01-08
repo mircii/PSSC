@@ -25,7 +25,8 @@ class Program
         
         var comanda = await workflow.ProceseazaComanda(produse);
         
-        Console.WriteLine($"Status comanda: {comanda.Status},Produse: {comanda.Produse} si Pret total: {comanda.PretTotal}");
+        Console.WriteLine($"Status comanda: {comanda.Status}\nProduse: {string.Join(", ", comanda.Produse.Select(p => $"{p.Cantitate}x {p.Denumire} (Pret: {p.Pret})"))}\nPret total: {comanda.PretTotal}\n");
+
     }
 }
 
